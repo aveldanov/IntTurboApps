@@ -58,16 +58,40 @@
 		211CEFE7262CE86900F6B9FC /* PaginationFeatureApp */ = {
 			isa = PBXGroup;
 			children = (
+				211CF002262CF59000F6B9FC /* Controllers */,
+				211CF001262CF58800F6B9FC /* Views */,
+				211CF000262CF57A00F6B9FC /* Services */,
 				211CEFE8262CE86900F6B9FC /* AppDelegate.swift */,
 				211CEFEA262CE86900F6B9FC /* SceneDelegate.swift */,
-				211CEFEC262CE86900F6B9FC /* ViewController.swift */,
-				211CEFEE262CE86900F6B9FC /* Main.storyboard */,
 				211CEFF1262CE86C00F6B9FC /* Assets.xcassets */,
 				211CEFF3262CE86C00F6B9FC /* LaunchScreen.storyboard */,
 				211CEFF6262CE86C00F6B9FC /* Info.plist */,
-				211CEFFD262CEA5600F6B9FC /* APICaller.swift */,
 			);
 			path = PaginationFeatureApp;
+			sourceTree = "<group>";
+		};
+		211CF000262CF57A00F6B9FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				211CEFFD262CEA5600F6B9FC /* APICaller.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		211CF001262CF58800F6B9FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				211CEFEE262CE86900F6B9FC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		211CF002262CF59000F6B9FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				211CEFEC262CE86900F6B9FC /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

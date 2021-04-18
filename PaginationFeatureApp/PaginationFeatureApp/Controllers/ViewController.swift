@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
     
     private let apiCaller = APICaller()
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         view.addSubview(tableView)
         tableView.dataSource = self //assign dataSource
-        
+        tableView.delegate = self
         
     }
     
@@ -34,17 +34,20 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
-        apiCaller.fetchData { [weak self] (result) in
+        
+        apiCaller.fetchData(pagination: false) { [weak self] (result) in
             switch result{
             case .success(let data):
             self?.data.append(contentsOf: data)
-            self?.tableView.reloadData()
-            
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             case .failure(_):
                 break
-            
+
             }
         }
+
     }
     
     
@@ -60,6 +63,29 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let position = scrollView.contentOffset.y
+        
+        if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height){
+            //fetch more data
+            apiCaller.fetchData(pagination: true) { (result) in
+                switch result{
+                case .success(let moreData):
+                    self.data.append(contentsOf: moreData)
+                    DispatchQueue.main.async {
+                        self?.tableView.reloadData()
+                    }
+                    
+                    
+                case .failure(_):
+                    break
+                }
+            }
+            print("fetchMoreData")
+        }
+    }
 
 
 }

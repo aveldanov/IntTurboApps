@@ -13,7 +13,7 @@ class APICaller {
     //mocking data
     //RESULT = gives .success .failure
     func fetchData(pagination:Bool = false, completion: @escaping (Result<[String], Error>)-> Void){
-        DispatchQueue.global().asyncAfter(deadline: .now()+1, execute: {
+        DispatchQueue.global().asyncAfter(deadline: .now()+(pagination ? 3 : 2), execute: {
             let originalData = [
                 "Apple",
                 "Google",
@@ -26,13 +26,26 @@ class APICaller {
                 "Facebook",
                 "Apple",
                 "Google",
-                "Facebook",
                 "Apple",
                 "Google",
                 "Facebook",
                 "Apple",
                 "Google",
-                "Facebook"
+                "Facebook",
+                "Apple",
+                "Google",
+                "Facebook",
+                "Apple",
+                "Apple",
+                "Google",
+                "Facebook",
+                "Apple",
+                "Google",
+                "Facebook",
+                "Apple",
+                "Google",
+                "Facebook",
+                "Apple"
             ]
             
             let newData = [
