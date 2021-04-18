@@ -70,10 +70,10 @@ class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDeleg
         
         if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height){
             //fetch more data
-            apiCaller.fetchData(pagination: true) { (result) in
+            apiCaller.fetchData(pagination: true) { [weak self] (result) in
                 switch result{
                 case .success(let moreData):
-                    self.data.append(contentsOf: moreData)
+                    self?.data.append(contentsOf: moreData)
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
