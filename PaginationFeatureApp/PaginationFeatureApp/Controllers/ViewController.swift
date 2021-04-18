@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
     
     private let apiCaller = APICaller()
-
+    
+    
     
     
     private let tableView: UITableView = {
@@ -64,29 +65,52 @@ class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDeleg
     }
     
     
+    
+    private func createSpinnerFooter() -> UIView{
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 100))
+        let spinner = UIActivityIndicatorView()
+        
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        
+        
+        return footerView
+    }
+    
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let position = scrollView.contentOffset.y
         
         if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height){
             //fetch more data
+            
+            guard !apiCaller.isPaginating  else {
+                // already fetching data
+                return
+            }
+            self.tableView.tableFooterView = createSpinnerFooter()
+            
             apiCaller.fetchData(pagination: true) { [weak self] (result) in
+                DispatchQueue.main.async {
+                    self?.tableView.tableFooterView = nil
+                }
                 switch result{
                 case .success(let moreData):
+                    print("SUCCESS")
                     self?.data.append(contentsOf: moreData)
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
-                    
-                    
                 case .failure(_):
+                    print("FAIL")
+
                     break
                 }
             }
             print("fetchMoreData")
         }
     }
-
-
 }
 

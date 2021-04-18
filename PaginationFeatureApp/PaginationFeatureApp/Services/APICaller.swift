@@ -9,10 +9,16 @@ import Foundation
 
 
 class APICaller {
+     var isPaginating = false
+
+    
     
     //mocking data
     //RESULT = gives .success .failure
     func fetchData(pagination:Bool = false, completion: @escaping (Result<[String], Error>)-> Void){
+        if pagination {
+            isPaginating = true
+        }
         DispatchQueue.global().asyncAfter(deadline: .now()+(pagination ? 3 : 2), execute: {
             let originalData = [
                 "Apple",
@@ -56,7 +62,9 @@ class APICaller {
             ]
             
             completion(.success(pagination ? newData : originalData))
-            
+            if pagination{
+                self.isPaginating = false
+            }
         })
         
         
