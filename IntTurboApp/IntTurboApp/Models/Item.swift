@@ -9,6 +9,8 @@ import Foundation
 
 
 struct Item: Decodable{
+    public private(set) var name: String?
+    public private(set) var description: String?
     
     
     
