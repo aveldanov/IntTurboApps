@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
     }()
     
-    private let data = [String]()
+    private var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self //assign dataSource
         
         
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+        apiCaller.fetchData { [weak self] (result) in
+            switch result{
+            case .success(let data):
+            self?.data.append(contentsOf: data)
+            self?.tableView.reloadData()
+            
+            case .failure(_):
+                break
+            
+            }
+        }
     }
     
     
