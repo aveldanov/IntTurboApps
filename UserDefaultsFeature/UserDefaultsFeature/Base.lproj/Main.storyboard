@@ -22,10 +22,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-Yh-aYj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-Yh-aYj">
                                 <rect key="frame" x="20" y="299" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjI-1z-eK0">
                                 <rect key="frame" x="190" y="408" width="34" height="30"/>
@@ -47,6 +47,9 @@
                             <constraint firstItem="EjI-1z-eK0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sH0-U5-pnO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberField" destination="bVg-Yh-aYj" id="Sd8-zq-vf8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

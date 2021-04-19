@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*
 //        UserDefaults.standard.set("Rob", forKey: "name")
         
          var nameObject = UserDefaults.standard.object(forKey: "name")
@@ -31,16 +33,42 @@ class ViewController: UIViewController {
         if let array = arrayObject as? Array<Any>{
             print(array)
             
+            
+            
+            
+        
+        
+        
+        
+        
+            
         }
         
+        */
         
+        
+        let userObject = UserDefaults.standard.object(forKey: "phone")
+        if let userPhone = userObject as? String{
+            
+            print(userPhone)
+            
+            numberField.text = userPhone
+        }
     }
 
     
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
-        UserDefaults.standard.set(numberField.text, forKey: "phone")
+        print(numberField)
+        if let numbderField = numberField{
+  
+            UserDefaults.standard.set(numberField.text, forKey: "phone")
+            print("saved")
+        }else{
+            print("OOPS")
+        }
+     
     }
     
     
