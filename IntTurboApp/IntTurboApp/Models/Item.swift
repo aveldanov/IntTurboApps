@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Item: Decodable{
+struct Item: Codable{
     public private(set) var name: String?
     public private(set) var description: String?
     

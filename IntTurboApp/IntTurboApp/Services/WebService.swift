@@ -25,6 +25,9 @@ class WebService{
                 }
                 
             }else{
+                
+                print(ItemsCache.get())
+
                 print(error?.localizedDescription)
             }
             

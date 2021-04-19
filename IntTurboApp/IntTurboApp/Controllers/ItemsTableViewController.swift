@@ -15,12 +15,18 @@ class ItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         WebService().fetchItems(url: url) { items in
             if let items = items{
                 self.itemsLoaded = items
-            }else{
+                ItemsCache.save(items)            }else{
                 print("No items loaded")
-                self.itemsLoaded = [Item(name: "Error", description: nil)]
+                
+                
+//                self.itemsLoaded = [Item(name: "Error", description: nil)]
+
+               
+                
             }
             
             
@@ -54,6 +60,10 @@ class ItemsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        
+        
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else{
             
             fatalError("no cell found")

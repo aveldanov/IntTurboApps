@@ -18,6 +18,7 @@
 		211CEFC6262CD73D00F6B9FC /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CEFC5262CD73D00F6B9FC /* WebService.swift */; };
 		211CEFCA262CDEF300F6B9FC /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CEFC9262CDEF300F6B9FC /* DetailedViewController.swift */; };
 		211CEFD3262CE67000F6B9FC /* IntTurboAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CEFD2262CE67000F6B9FC /* IntTurboAppUITests.swift */; };
+		211CF02B262D3AFC00F6B9FC /* ItemsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CF02A262D3AFC00F6B9FC /* ItemsCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		211CEFD0262CE67000F6B9FC /* IntTurboAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntTurboAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CEFD2262CE67000F6B9FC /* IntTurboAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTurboAppUITests.swift; sourceTree = "<group>"; };
 		211CEFD4262CE67000F6B9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		211CF02A262D3AFC00F6B9FC /* ItemsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				211CEFC5262CD73D00F6B9FC /* WebService.swift */,
+				211CF02A262D3AFC00F6B9FC /* ItemsCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				211CEFCA262CDEF300F6B9FC /* DetailedViewController.swift in Sources */,
+				211CF02B262D3AFC00F6B9FC /* ItemsCache.swift in Sources */,
 				211CEFC6262CD73D00F6B9FC /* WebService.swift in Sources */,
 				211CEFC3262CD6B200F6B9FC /* Item.swift in Sources */,
 				211CEFBE262CD69B00F6B9FC /* ItemTableViewCell.swift in Sources */,
