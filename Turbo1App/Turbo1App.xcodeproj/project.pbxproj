@@ -15,6 +15,7 @@
 		2185E2862632901300FF21F6 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E2852632901300FF21F6 /* ItemTableViewController.swift */; };
 		2185E28B2632902A00FF21F6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E28A2632902A00FF21F6 /* WebService.swift */; };
 		2185E290263292DF00FF21F6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E28F263292DF00FF21F6 /* Item.swift */; };
+		2185E2942632947B00FF21F6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2185E2852632901300FF21F6 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		2185E28A2632902A00FF21F6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2185E28F263292DF00FF21F6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2185E2852632901300FF21F6 /* ItemTableViewController.swift */,
+				2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				2185E26D2632814800FF21F6 /* AppDelegate.swift in Sources */,
 				2185E2862632901300FF21F6 /* ItemTableViewController.swift in Sources */,
 				2185E28B2632902A00FF21F6 /* WebService.swift in Sources */,
+				2185E2942632947B00FF21F6 /* ItemTableViewCell.swift in Sources */,
 				2185E26F2632814800FF21F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 class ItemTableViewController: UITableViewController {
     
     private let url = URL(string: "https://api.github.com/users/intuit/repos")!
-
+    private var itemsLoaded: [Item]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,24 +27,27 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return itemsLoaded == nil ? 0 : itemsLoaded!.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
+            
+            fatalError("no cell")
+        }
+        if let itemsLoaded = itemsLoaded{
+            cell.nameLabel.text = itemsLoaded[indexPath.row].name
+        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
