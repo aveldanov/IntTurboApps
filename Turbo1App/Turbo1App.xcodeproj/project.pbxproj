@@ -16,7 +16,19 @@
 		2185E28B2632902A00FF21F6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E28A2632902A00FF21F6 /* WebService.swift */; };
 		2185E290263292DF00FF21F6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E28F263292DF00FF21F6 /* Item.swift */; };
 		2185E2942632947B00FF21F6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */; };
+		2185E2992632973100FF21F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E2982632973100FF21F6 /* DetailViewController.swift */; };
+		2185E2A226329C6400FF21F6 /* Turbo1AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E2A126329C6400FF21F6 /* Turbo1AppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2185E2A426329C6400FF21F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2185E2612632814700FF21F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2185E2682632814700FF21F6;
+			remoteInfo = Turbo1App;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2185E2692632814800FF21F6 /* Turbo1App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turbo1App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +42,21 @@
 		2185E28A2632902A00FF21F6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2185E28F263292DF00FF21F6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		2185E2982632973100FF21F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2185E29F26329C6400FF21F6 /* Turbo1AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Turbo1AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2185E2A126329C6400FF21F6 /* Turbo1AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turbo1AppUITests.swift; sourceTree = "<group>"; };
+		2185E2A326329C6400FF21F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2185E2662632814700FF21F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2185E29C26329C6400FF21F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				2185E26B2632814800FF21F6 /* Turbo1App */,
+				2185E2A026329C6400FF21F6 /* Turbo1AppUITests */,
 				2185E26A2632814800FF21F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2185E2692632814800FF21F6 /* Turbo1App.app */,
+				2185E29F26329C6400FF21F6 /* Turbo1AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +92,7 @@
 				2185E28426328FFA00FF21F6 /* Controllers */,
 				2185E26C2632814800FF21F6 /* AppDelegate.swift */,
 				2185E26E2632814800FF21F6 /* SceneDelegate.swift */,
-				2185E2722632814800FF21F6 /* Main.storyboard */,
+				2185E2AB26329CDB00FF21F6 /* View */,
 				2185E2752632814A00FF21F6 /* Assets.xcassets */,
 				2185E2772632814B00FF21F6 /* LaunchScreen.storyboard */,
 				2185E27A2632814B00FF21F6 /* Info.plist */,
@@ -80,6 +105,7 @@
 			children = (
 				2185E2852632901300FF21F6 /* ItemTableViewController.swift */,
 				2185E2932632947B00FF21F6 /* ItemTableViewCell.swift */,
+				2185E2982632973100FF21F6 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +124,23 @@
 				2185E28F263292DF00FF21F6 /* Item.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2185E2A026329C6400FF21F6 /* Turbo1AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2185E2A126329C6400FF21F6 /* Turbo1AppUITests.swift */,
+				2185E2A326329C6400FF21F6 /* Info.plist */,
+			);
+			path = Turbo1AppUITests;
+			sourceTree = "<group>";
+		};
+		2185E2AB26329CDB00FF21F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2185E2722632814800FF21F6 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +163,24 @@
 			productReference = 2185E2692632814800FF21F6 /* Turbo1App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2185E29E26329C6400FF21F6 /* Turbo1AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2185E2A626329C6400FF21F6 /* Build configuration list for PBXNativeTarget "Turbo1AppUITests" */;
+			buildPhases = (
+				2185E29B26329C6400FF21F6 /* Sources */,
+				2185E29C26329C6400FF21F6 /* Frameworks */,
+				2185E29D26329C6400FF21F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2185E2A526329C6400FF21F6 /* PBXTargetDependency */,
+			);
+			name = Turbo1AppUITests;
+			productName = Turbo1AppUITests;
+			productReference = 2185E29F26329C6400FF21F6 /* Turbo1AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +192,10 @@
 				TargetAttributes = {
 					2185E2682632814700FF21F6 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					2185E29E26329C6400FF21F6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2185E2682632814700FF21F6;
 					};
 				};
 			};
@@ -148,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				2185E2682632814700FF21F6 /* Turbo1App */,
+				2185E29E26329C6400FF21F6 /* Turbo1AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +226,13 @@
 				2185E2792632814B00FF21F6 /* LaunchScreen.storyboard in Resources */,
 				2185E2762632814A00FF21F6 /* Assets.xcassets in Resources */,
 				2185E2742632814800FF21F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2185E29D26329C6400FF21F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +249,27 @@
 				2185E28B2632902A00FF21F6 /* WebService.swift in Sources */,
 				2185E2942632947B00FF21F6 /* ItemTableViewCell.swift in Sources */,
 				2185E26F2632814800FF21F6 /* SceneDelegate.swift in Sources */,
+				2185E2992632973100FF21F6 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2185E29B26329C6400FF21F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2185E2A226329C6400FF21F6 /* Turbo1AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2185E2A526329C6400FF21F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2185E2682632814700FF21F6 /* Turbo1App */;
+			targetProxy = 2185E2A426329C6400FF21F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2185E2722632814800FF21F6 /* Main.storyboard */ = {
@@ -355,6 +445,44 @@
 			};
 			name = Release;
 		};
+		2185E2A726329C6400FF21F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
+				INFOPLIST_FILE = Turbo1AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.Turbo1AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Turbo1App;
+			};
+			name = Debug;
+		};
+		2185E2A826329C6400FF21F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
+				INFOPLIST_FILE = Turbo1AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.Turbo1AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Turbo1App;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +500,15 @@
 			buildConfigurations = (
 				2185E27E2632814B00FF21F6 /* Debug */,
 				2185E27F2632814B00FF21F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2185E2A626329C6400FF21F6 /* Build configuration list for PBXNativeTarget "Turbo1AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2185E2A726329C6400FF21F6 /* Debug */,
+				2185E2A826329C6400FF21F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PDO-Ye-rTN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PDO-Ye-rTN" customClass="ItemTableViewCell" customModule="Turbo1App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PDO-Ye-rTN" id="s7Q-a4-nlh" customClass="ItemTableViewCell" customModule="Turbo1App" customModuleProvider="target">
@@ -31,10 +32,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <connections>
-                                        <outlet property="nameLabel" destination="nVl-vQ-zle" id="pvS-lk-WXt"/>
-                                    </connections>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="nVl-vQ-zle" id="vfN-Cv-cxT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,10 +44,56 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Bm-5d-Z2S"/>
+                    <connections>
+                        <segue destination="f2p-n6-Tur" kind="show" identifier="goToDetail" id="VS8-1L-WVt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vde-94-HQL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043.4782608695652" y="202.90178571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HDn-k7-sah">
+            <objects>
+                <viewController id="f2p-n6-Tur" customClass="DetailViewController" customModule="Turbo1App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bkm-xo-WWW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="jP6-kJ-j3V">
+                                <rect key="frame" x="186.5" y="319" width="41.5" height="258"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-xq-AFs">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7b-80-BY0">
+                                        <rect key="frame" x="0.0" y="237.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q1Z-ak-zpx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jP6-kJ-j3V" firstAttribute="centerY" secondItem="bkm-xo-WWW" secondAttribute="centerY" id="Jtf-Rq-bfR"/>
+                            <constraint firstItem="jP6-kJ-j3V" firstAttribute="centerX" secondItem="bkm-xo-WWW" secondAttribute="centerX" id="WyA-Gd-fer"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T0j-J8-um3"/>
+                    <connections>
+                        <outlet property="detNameLabel" destination="Pgv-xq-AFs" id="u4F-SJ-7Av"/>
+                        <outlet property="keyLabel" destination="T7b-80-BY0" id="L02-be-8iU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVz-LZ-6DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="203"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddv-oi-gFq">

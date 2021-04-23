@@ -11,7 +11,7 @@ import Foundation
 class WebService{
     
     
-    func fetchData(url:URL, completion:@escaping (Result<[Item]?,Error>)->()){
+    func fetchData(url:URL, pagination:Bool = false, completion:@escaping (Result<[Item]?,Error>)->()){
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let data = data{
