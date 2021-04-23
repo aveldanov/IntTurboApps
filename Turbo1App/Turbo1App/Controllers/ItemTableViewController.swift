@@ -9,7 +9,7 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
     
-    let url = URL(string: "https://api.github.com/users/intuit/repos")!
+    private let url = URL(string: "https://api.github.com/users/intuit/repos")!
 
     override func viewDidLoad() {
         super.viewDidLoad()

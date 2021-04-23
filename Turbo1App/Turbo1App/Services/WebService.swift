@@ -11,7 +11,7 @@ import Foundation
 class WebService{
     
     
-    func fetchData(url:URL, completetion:@escaping (Result<Any,Error>)->()){
+    func fetchData(url:URL, completetion:@escaping (Result<[Any]?,Error>)->()){
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             print(data)
             
