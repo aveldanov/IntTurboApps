@@ -1,0 +1,15 @@
+//
+//  Item.swift
+//  Turbo1App
+//
+//  Created by Veldanov, Anton on 4/22/21.
+//
+
+import Foundation
+
+
+struct Item: Codable{
+    public private(set) var name: String?
+    
+    
+}

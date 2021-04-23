@@ -14,8 +14,13 @@ class ItemTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        WebService().fetchData(url: url) { (_) in
-            
+        WebService().fetchData(url: url) { (result) in
+            switch result{
+            case .success(let items):
+                print(items)
+            case .failure(_):
+                break
+            }
         }
     }
 
