@@ -14,6 +14,7 @@
 		2185E338263646AC00FF21F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E336263646AC00FF21F6 /* LaunchScreen.storyboard */; };
 		2185E343263646F600FF21F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E342263646F600FF21F6 /* TableViewController.swift */; };
 		2185E3482636470900FF21F6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E3472636470900FF21F6 /* WebService.swift */; };
+		2185E34D2636481A00FF21F6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E34C2636481A00FF21F6 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2185E339263646AC00FF21F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2185E342263646F600FF21F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2185E3472636470900FF21F6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		2185E34C2636481A00FF21F6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		2185E32A263646A800FF21F6 /* Turbo2App */ = {
 			isa = PBXGroup;
 			children = (
+				2185E34B2636480F00FF21F6 /* Model */,
 				2185E346263646FD00FF21F6 /* Services */,
 				2185E341263646E100FF21F6 /* Controllers */,
 				2185E32B263646A800FF21F6 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				2185E3472636470900FF21F6 /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2185E34B2636480F00FF21F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2185E34C2636481A00FF21F6 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2185E34D2636481A00FF21F6 /* Item.swift in Sources */,
 				2185E32C263646A800FF21F6 /* AppDelegate.swift in Sources */,
 				2185E343263646F600FF21F6 /* TableViewController.swift in Sources */,
 				2185E3482636470900FF21F6 /* WebService.swift in Sources */,

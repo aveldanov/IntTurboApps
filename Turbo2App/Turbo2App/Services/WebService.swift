@@ -11,10 +11,20 @@ import Foundation
 class WebService{
     
     
-    func fetchItems(_ url:URL, completion: (Result<[Any]?, Error>)->()){
+    func fetchItems(_ url:URL, completion:@escaping (Result<[Item]?, Error>)->()){
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            print(data)
+            
+            if let data = data{
+                
+                let decoder = JSONDecoder()
+                
+                let items = try? decoder.decode([Item].self, from: data)
+                
+                completion(.success(items))
+                
+            }
+            
         }.resume()
         
         
