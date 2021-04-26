@@ -7,35 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2185E32C263646A800FF21F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E32B263646A800FF21F6 /* AppDelegate.swift */; };
-		2185E32E263646A800FF21F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E32D263646A800FF21F6 /* SceneDelegate.swift */; };
-		2185E333263646A800FF21F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E331263646A800FF21F6 /* Main.storyboard */; };
-		2185E335263646AC00FF21F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2185E334263646AC00FF21F6 /* Assets.xcassets */; };
-		2185E338263646AC00FF21F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E336263646AC00FF21F6 /* LaunchScreen.storyboard */; };
-		2185E343263646F600FF21F6 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E342263646F600FF21F6 /* ItemsTableViewController.swift */; };
-		2185E3482636470900FF21F6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E3472636470900FF21F6 /* WebService.swift */; };
-		2185E34D2636481A00FF21F6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E34C2636481A00FF21F6 /* Item.swift */; };
-		2185E3512636492200FF21F6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E3502636492200FF21F6 /* ItemTableViewCell.swift */; };
-		2185E35526364ACF00FF21F6 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E35426364ACF00FF21F6 /* DetailedViewController.swift */; };
+		2185E36426364DFD00FF21F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E36326364DFD00FF21F6 /* AppDelegate.swift */; };
+		2185E36626364DFD00FF21F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E36526364DFD00FF21F6 /* SceneDelegate.swift */; };
+		2185E36826364DFD00FF21F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E36726364DFD00FF21F6 /* ViewController.swift */; };
+		2185E36B26364DFD00FF21F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E36926364DFD00FF21F6 /* Main.storyboard */; };
+		2185E36D26364DFF00FF21F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2185E36C26364DFF00FF21F6 /* Assets.xcassets */; };
+		2185E37026364DFF00FF21F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E36E26364DFF00FF21F6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2185E328263646A800FF21F6 /* Turbo2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turbo2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2185E32B263646A800FF21F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2185E32D263646A800FF21F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2185E332263646A800FF21F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2185E334263646AC00FF21F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2185E337263646AC00FF21F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2185E339263646AC00FF21F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2185E342263646F600FF21F6 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
-		2185E3472636470900FF21F6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		2185E34C2636481A00FF21F6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		2185E3502636492200FF21F6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		2185E35426364ACF00FF21F6 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		2185E36026364DFD00FF21F6 /* MovieSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2185E36326364DFD00FF21F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2185E36526364DFD00FF21F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2185E36726364DFD00FF21F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2185E36A26364DFD00FF21F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2185E36C26364DFF00FF21F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2185E36F26364DFF00FF21F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2185E37126364DFF00FF21F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2185E325263646A800FF21F6 /* Frameworks */ = {
+		2185E35D26364DFD00FF21F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,99 +37,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2185E31F263646A800FF21F6 = {
+		2185E35726364DFD00FF21F6 = {
 			isa = PBXGroup;
 			children = (
-				2185E32A263646A800FF21F6 /* Turbo2App */,
-				2185E329263646A800FF21F6 /* Products */,
+				2185E36226364DFD00FF21F6 /* MovieSearchApp */,
+				2185E36126364DFD00FF21F6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2185E329263646A800FF21F6 /* Products */ = {
+		2185E36126364DFD00FF21F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2185E328263646A800FF21F6 /* Turbo2App.app */,
+				2185E36026364DFD00FF21F6 /* MovieSearchApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2185E32A263646A800FF21F6 /* Turbo2App */ = {
+		2185E36226364DFD00FF21F6 /* MovieSearchApp */ = {
 			isa = PBXGroup;
 			children = (
-				2185E34B2636480F00FF21F6 /* Model */,
-				2185E346263646FD00FF21F6 /* Services */,
-				2185E341263646E100FF21F6 /* Controllers */,
-				2185E32B263646A800FF21F6 /* AppDelegate.swift */,
-				2185E32D263646A800FF21F6 /* SceneDelegate.swift */,
-				2185E331263646A800FF21F6 /* Main.storyboard */,
-				2185E334263646AC00FF21F6 /* Assets.xcassets */,
-				2185E336263646AC00FF21F6 /* LaunchScreen.storyboard */,
-				2185E339263646AC00FF21F6 /* Info.plist */,
+				2185E36326364DFD00FF21F6 /* AppDelegate.swift */,
+				2185E36526364DFD00FF21F6 /* SceneDelegate.swift */,
+				2185E36726364DFD00FF21F6 /* ViewController.swift */,
+				2185E36926364DFD00FF21F6 /* Main.storyboard */,
+				2185E36C26364DFF00FF21F6 /* Assets.xcassets */,
+				2185E36E26364DFF00FF21F6 /* LaunchScreen.storyboard */,
+				2185E37126364DFF00FF21F6 /* Info.plist */,
 			);
-			path = Turbo2App;
-			sourceTree = "<group>";
-		};
-		2185E341263646E100FF21F6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2185E342263646F600FF21F6 /* ItemsTableViewController.swift */,
-				2185E3502636492200FF21F6 /* ItemTableViewCell.swift */,
-				2185E35426364ACF00FF21F6 /* DetailedViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2185E346263646FD00FF21F6 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				2185E3472636470900FF21F6 /* WebService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		2185E34B2636480F00FF21F6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2185E34C2636481A00FF21F6 /* Item.swift */,
-			);
-			path = Model;
+			path = MovieSearchApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2185E327263646A800FF21F6 /* Turbo2App */ = {
+		2185E35F26364DFD00FF21F6 /* MovieSearchApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2185E33C263646AC00FF21F6 /* Build configuration list for PBXNativeTarget "Turbo2App" */;
+			buildConfigurationList = 2185E37426364DFF00FF21F6 /* Build configuration list for PBXNativeTarget "MovieSearchApp" */;
 			buildPhases = (
-				2185E324263646A800FF21F6 /* Sources */,
-				2185E325263646A800FF21F6 /* Frameworks */,
-				2185E326263646A800FF21F6 /* Resources */,
+				2185E35C26364DFD00FF21F6 /* Sources */,
+				2185E35D26364DFD00FF21F6 /* Frameworks */,
+				2185E35E26364DFD00FF21F6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Turbo2App;
-			productName = Turbo2App;
-			productReference = 2185E328263646A800FF21F6 /* Turbo2App.app */;
+			name = MovieSearchApp;
+			productName = MovieSearchApp;
+			productReference = 2185E36026364DFD00FF21F6 /* MovieSearchApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2185E320263646A800FF21F6 /* Project object */ = {
+		2185E35826364DFD00FF21F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					2185E327263646A800FF21F6 = {
+					2185E35F26364DFD00FF21F6 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 2185E323263646A800FF21F6 /* Build configuration list for PBXProject "Turbo2App" */;
+			buildConfigurationList = 2185E35B26364DFD00FF21F6 /* Build configuration list for PBXProject "MovieSearchApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,59 +109,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 2185E31F263646A800FF21F6;
-			productRefGroup = 2185E329263646A800FF21F6 /* Products */;
+			mainGroup = 2185E35726364DFD00FF21F6;
+			productRefGroup = 2185E36126364DFD00FF21F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2185E327263646A800FF21F6 /* Turbo2App */,
+				2185E35F26364DFD00FF21F6 /* MovieSearchApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2185E326263646A800FF21F6 /* Resources */ = {
+		2185E35E26364DFD00FF21F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2185E338263646AC00FF21F6 /* LaunchScreen.storyboard in Resources */,
-				2185E335263646AC00FF21F6 /* Assets.xcassets in Resources */,
-				2185E333263646A800FF21F6 /* Main.storyboard in Resources */,
+				2185E37026364DFF00FF21F6 /* LaunchScreen.storyboard in Resources */,
+				2185E36D26364DFF00FF21F6 /* Assets.xcassets in Resources */,
+				2185E36B26364DFD00FF21F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2185E324263646A800FF21F6 /* Sources */ = {
+		2185E35C26364DFD00FF21F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2185E35526364ACF00FF21F6 /* DetailedViewController.swift in Sources */,
-				2185E34D2636481A00FF21F6 /* Item.swift in Sources */,
-				2185E32C263646A800FF21F6 /* AppDelegate.swift in Sources */,
-				2185E343263646F600FF21F6 /* ItemsTableViewController.swift in Sources */,
-				2185E3482636470900FF21F6 /* WebService.swift in Sources */,
-				2185E3512636492200FF21F6 /* ItemTableViewCell.swift in Sources */,
-				2185E32E263646A800FF21F6 /* SceneDelegate.swift in Sources */,
+				2185E36826364DFD00FF21F6 /* ViewController.swift in Sources */,
+				2185E36426364DFD00FF21F6 /* AppDelegate.swift in Sources */,
+				2185E36626364DFD00FF21F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2185E331263646A800FF21F6 /* Main.storyboard */ = {
+		2185E36926364DFD00FF21F6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2185E332263646A800FF21F6 /* Base */,
+				2185E36A26364DFD00FF21F6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2185E336263646AC00FF21F6 /* LaunchScreen.storyboard */ = {
+		2185E36E26364DFF00FF21F6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2185E337263646AC00FF21F6 /* Base */,
+				2185E36F26364DFF00FF21F6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -205,7 +165,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2185E33A263646AC00FF21F6 /* Debug */ = {
+		2185E37226364DFF00FF21F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		2185E33B263646AC00FF21F6 /* Release */ = {
+		2185E37326364DFF00FF21F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -321,38 +281,38 @@
 			};
 			name = Release;
 		};
-		2185E33D263646AC00FF21F6 /* Debug */ = {
+		2185E37526364DFF00FF21F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
-				INFOPLIST_FILE = Turbo2App/Info.plist;
+				INFOPLIST_FILE = MovieSearchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.Turbo2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.MovieSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2185E33E263646AC00FF21F6 /* Release */ = {
+		2185E37626364DFF00FF21F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLJ84Q3ZSY;
-				INFOPLIST_FILE = Turbo2App/Info.plist;
+				INFOPLIST_FILE = MovieSearchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.Turbo2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aveldanov.MovieSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2185E323263646A800FF21F6 /* Build configuration list for PBXProject "Turbo2App" */ = {
+		2185E35B26364DFD00FF21F6 /* Build configuration list for PBXProject "MovieSearchApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2185E33A263646AC00FF21F6 /* Debug */,
-				2185E33B263646AC00FF21F6 /* Release */,
+				2185E37226364DFF00FF21F6 /* Debug */,
+				2185E37326364DFF00FF21F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2185E33C263646AC00FF21F6 /* Build configuration list for PBXNativeTarget "Turbo2App" */ = {
+		2185E37426364DFF00FF21F6 /* Build configuration list for PBXNativeTarget "MovieSearchApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2185E33D263646AC00FF21F6 /* Debug */,
-				2185E33E263646AC00FF21F6 /* Release */,
+				2185E37526364DFF00FF21F6 /* Debug */,
+				2185E37626364DFF00FF21F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2185E320263646A800FF21F6 /* Project object */;
+	rootObject = 2185E35826364DFD00FF21F6 /* Project object */;
 }
