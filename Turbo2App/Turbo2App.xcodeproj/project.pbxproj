@@ -12,9 +12,10 @@
 		2185E333263646A800FF21F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E331263646A800FF21F6 /* Main.storyboard */; };
 		2185E335263646AC00FF21F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2185E334263646AC00FF21F6 /* Assets.xcassets */; };
 		2185E338263646AC00FF21F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2185E336263646AC00FF21F6 /* LaunchScreen.storyboard */; };
-		2185E343263646F600FF21F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E342263646F600FF21F6 /* TableViewController.swift */; };
+		2185E343263646F600FF21F6 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E342263646F600FF21F6 /* ItemsTableViewController.swift */; };
 		2185E3482636470900FF21F6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E3472636470900FF21F6 /* WebService.swift */; };
 		2185E34D2636481A00FF21F6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E34C2636481A00FF21F6 /* Item.swift */; };
+		2185E3512636492200FF21F6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185E3502636492200FF21F6 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +26,10 @@
 		2185E334263646AC00FF21F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2185E337263646AC00FF21F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2185E339263646AC00FF21F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2185E342263646F600FF21F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2185E342263646F600FF21F6 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		2185E3472636470900FF21F6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2185E34C2636481A00FF21F6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2185E3502636492200FF21F6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 		2185E341263646E100FF21F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2185E342263646F600FF21F6 /* TableViewController.swift */,
+				2185E342263646F600FF21F6 /* ItemsTableViewController.swift */,
+				2185E3502636492200FF21F6 /* ItemTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,8 +172,9 @@
 			files = (
 				2185E34D2636481A00FF21F6 /* Item.swift in Sources */,
 				2185E32C263646A800FF21F6 /* AppDelegate.swift in Sources */,
-				2185E343263646F600FF21F6 /* TableViewController.swift in Sources */,
+				2185E343263646F600FF21F6 /* ItemsTableViewController.swift in Sources */,
 				2185E3482636470900FF21F6 /* WebService.swift in Sources */,
+				2185E3512636492200FF21F6 /* ItemTableViewCell.swift in Sources */,
 				2185E32E263646A800FF21F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
