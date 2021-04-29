@@ -9,28 +9,74 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//    var someService: SomeService?
-    var someService: SomeService
+    enum ProgLang{
+        
+        case swift
+        case java
+        case objectivec
+        case basic
+    }
 
-    init(someService: SomeService){
-        self.someService = someService
-        super.init(nibName: nil, bundle: nil)
-        view.backgroundColor = .brown
+    
+    class Computer{
+        var operatingSystem: String!
+        
+        func printOperatingSystem(){
+           print(operatingSystem)
+            
+        }
+        
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    class Programmer{
+        var programmingLang: ProgLang!
+        var name: String!
+        var computerUsed: Computer
+        
+        init(computerUsed: Computer) {
+            self.computerUsed = computerUsed
+        }
+        
+        
+        func catchPhrases() -> String{
+            var catchPhrase = ""
+            
+            switch programmingLang {
+            case .basic:
+                catchPhrase = "basiccc"
+            case .java:
+                catchPhrase = "javaccc"
+            case .swift:
+                catchPhrase = "swiftcc"
+            default:
+                catchPhrase = "none"
+                break
+            }
+            return catchPhrase
+            
+        }
+        
     }
+    
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let computer = Computer()
+
+        let programmer = Programmer(computerUsed: computer) //dependency injection
+        let catchPhrase = programmer.catchPhrases()
+        print("phrase",catchPhrase)
+        print(programmer.name)
         
-//        SomeService.shared.doStuff()
-        
-        
-        someService.doStuff()
-        
+        computer.operatingSystem = "macOS"
+        programmer.computerUsed = computer//
+        print(programmer.computerUsed.printOperatingSystem())
+
 
     }
 
