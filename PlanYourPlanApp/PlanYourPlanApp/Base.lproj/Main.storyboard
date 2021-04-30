@@ -30,7 +30,11 @@
                             <outlet property="delegate" destination="4ac-xt-and" id="GRU-hX-zId"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Plan" id="eLI-gZ-RJD"/>
+                    <navigationItem key="navigationItem" title="Plan" id="eLI-gZ-RJD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I89-yJ-OoE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQn-RG-C8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
