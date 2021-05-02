@@ -49,6 +49,9 @@
                                     <segment title="Serious"/>
                                     <segment title="Crazy"/>
                                 </segments>
+                                <connections>
+                                    <action selector="categoryChanged:" destination="PBb-Mn-RU3" eventType="valueChanged" id="HqK-oZ-ig9"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-pO-VOR">
                                 <rect key="frame" x="20" y="184" width="374" height="14"/>
@@ -75,6 +78,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonTapped:" destination="PBb-Mn-RU3" eventType="touchUpInside" id="sG1-7V-nyX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J8l-QJ-sg4"/>
@@ -94,6 +100,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cvq-ac-ASX"/>
+                    <connections>
+                        <outlet property="categorySegment" destination="pkr-5W-Vzr" id="OxJ-J7-von"/>
+                        <outlet property="postButton" destination="dAY-tH-ZpD" id="4IO-Y4-TLy"/>
+                        <outlet property="thoughtText" destination="e0h-PJ-4VI" id="PuP-6x-AwB"/>
+                        <outlet property="userNameText" destination="1Ux-pO-VOR" id="9Vq-03-PkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fkh-Yp-ZrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
