@@ -10,6 +10,7 @@
 		212DC6D8263F497100134830 /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DC6D7263F497100134830 /* AddThoughtViewController.swift */; };
 		212DC6DE263F5BC100134830 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DC6DD263F5BC100134830 /* Constants.swift */; };
 		212DC6E0263F659E00134830 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DC6DF263F659E00134830 /* Thought.swift */; };
+		212DC6E2263F674C00134830 /* ThoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DC6E1263F674C00134830 /* ThoughtTableViewCell.swift */; };
 		215884D0263F2FD200DE349E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884CF263F2FD200DE349E /* AppDelegate.swift */; };
 		215884D2263F2FD200DE349E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884D1263F2FD200DE349E /* SceneDelegate.swift */; };
 		215884D4263F2FD200DE349E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884D3263F2FD200DE349E /* MainViewController.swift */; };
@@ -24,6 +25,7 @@
 		212DC6D7263F497100134830 /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
 		212DC6DD263F5BC100134830 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		212DC6DF263F659E00134830 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		212DC6E1263F674C00134830 /* ThoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTableViewCell.swift; sourceTree = "<group>"; };
 		215884CC263F2FD200DE349E /* ThoughtItOutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtItOutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215884CF263F2FD200DE349E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		215884D1263F2FD200DE349E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				215884D3263F2FD200DE349E /* MainViewController.swift */,
 				212DC6D7263F497100134830 /* AddThoughtViewController.swift */,
+				212DC6E1263F674C00134830 /* ThoughtTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212DC6E2263F674C00134830 /* ThoughtTableViewCell.swift in Sources */,
 				212DC6DE263F5BC100134830 /* Constants.swift in Sources */,
 				212DC6D8263F497100134830 /* AddThoughtViewController.swift in Sources */,
 				215884D4263F2FD200DE349E /* MainViewController.swift in Sources */,

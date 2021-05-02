@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="172" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="120" id="NR3-ll-klC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="NR3-ll-klC" customClass="ThoughtTableViewCell" customModule="ThoughtItOutApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NR3-ll-klC" id="KiW-aE-zcn">
@@ -92,6 +92,13 @@
                                                 <constraint firstItem="usg-Sq-ypM" firstAttribute="top" secondItem="zyM-dL-SIY" secondAttribute="bottom" constant="12" id="vtY-DH-GZ0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likesImage" destination="nN7-Vh-swA" id="fDt-T6-26y"/>
+                                            <outlet property="likesNumLabel" destination="Rtu-qZ-mcb" id="QcO-J0-gPx"/>
+                                            <outlet property="thoughtTextLabel" destination="usg-Sq-ypM" id="F02-1N-0XE"/>
+                                            <outlet property="timestampLabel" destination="h8q-U3-gEa" id="1SV-tW-PIA"/>
+                                            <outlet property="usernameLabel" destination="zyM-dL-SIY" id="AqM-GD-5Mj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

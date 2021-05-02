@@ -40,6 +40,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ThoughtTableViewCell{
+            
+            cell.configureCell(thought: thoughtsArr[indexPath.row])
+        }
         return UITableViewCell()
     }
     
