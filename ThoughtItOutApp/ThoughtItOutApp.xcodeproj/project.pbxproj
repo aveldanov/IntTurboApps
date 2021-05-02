@@ -60,6 +60,7 @@
 		212DC6DA263F497E00134830 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				215884D5263F2FD200DE349E /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,7 +107,6 @@
 				212DC6D9263F497800134830 /* Controllers */,
 				215884CF263F2FD200DE349E /* AppDelegate.swift */,
 				215884D1263F2FD200DE349E /* SceneDelegate.swift */,
-				215884D5263F2FD200DE349E /* Main.storyboard */,
 				215884D8263F2FD400DE349E /* Assets.xcassets */,
 				215884DA263F2FD400DE349E /* LaunchScreen.storyboard */,
 				215884DD263F2FD400DE349E /* Info.plist */,

@@ -52,13 +52,13 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
         }
         
         
-        Firestore.firestore().collection("thoughts").addDocument(data: [
-        "category" : selectedCategory,
-            "numComments": 0,
-            "numLikes":0,
-            "thoughtText":thoughtText.text,
-            "timeStamp": FieldValue.serverTimestamp(),
-            "username": username
+        Firestore.firestore().collection(THOUGHT_REF).addDocument(data: [
+            CATEGORY: selectedCategory,
+            NUM_COMMENTS: 0,
+            NUM_LIKES: 0,
+            THOUGHT_TEXT: thoughtText.text,
+            TIMESTAMP: FieldValue.serverTimestamp(),
+            USERNAME: username
             
         ]) { error in
             if let error = error{
