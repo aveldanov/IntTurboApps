@@ -12,10 +12,10 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
  //MARK: Outlets
     
     
-    @IBOutlet weak var categorySegment: UISegmentedControl!
-    @IBOutlet weak var userNameText: UITextField!
-    @IBOutlet weak var thoughtText: UITextView!
-    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak private var categorySegment: UISegmentedControl!
+    @IBOutlet weak private var userNameText: UITextField!
+    @IBOutlet weak private var thoughtText: UITextView!
+    @IBOutlet weak private var postButton: UIButton!
     
      //MARK: Variables
     
