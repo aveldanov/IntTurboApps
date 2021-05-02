@@ -20,7 +20,8 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
      //MARK: Variables
     
     private var selectedCategory = ThoughtCategory.funny.rawValue
-    
+    let db = Firestore.firestore()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,7 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
         }
         
         
-        Firestore.firestore().collection(THOUGHT_REF).addDocument(data: [
+        db.collection(THOUGHT_REF).addDocument(data: [
             CATEGORY: selectedCategory,
             NUM_COMMENTS: 0,
             NUM_LIKES: 0,

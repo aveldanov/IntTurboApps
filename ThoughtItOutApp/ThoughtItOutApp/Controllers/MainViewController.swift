@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 enum ThoughtCategory: String{
     case serious = "serious"
@@ -26,7 +27,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
      //MARK: Variables
     
     private var thoughtsArr = [Thought]()
-    
+    private var thoughtsCollectionRef: CollectionReference!
+    let db = Firestore.firestore()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +37,30 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableView.automaticDimension
+        thoughtsCollectionRef = db.collection(THOUGHT_REF)
     }
 
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        thoughtsCollectionRef.getDocuments { snapshot, error in
+            if let error = error{
+                debugPrint("Error fetching docs\(error)")
+            }else{
+                guard let snapshot = snapshot else {
+                    return
+                }
+                for document in snapshot.documents{
+                    let data = document.data()
+                    let username = data[USERNAME] as? String ?? "no name"
+                    
+                }
+            }
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return thoughtsArr.count
     }
