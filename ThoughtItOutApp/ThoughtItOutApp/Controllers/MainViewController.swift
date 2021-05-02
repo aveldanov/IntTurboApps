@@ -15,7 +15,7 @@ enum ThoughtCategory: String{
 }
 
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
      //MARK: Outlets
@@ -32,6 +32,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewDele
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
 
 
@@ -44,8 +46,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewDele
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ThoughtTableViewCell{
             
             cell.configureCell(thought: thoughtsArr[indexPath.row])
+            return cell
+        }else{
+            return UITableViewCell()
         }
-        return UITableViewCell()
     }
     
     
