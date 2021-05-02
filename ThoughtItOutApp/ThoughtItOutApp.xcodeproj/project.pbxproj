@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212DC6D8263F497100134830 /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DC6D7263F497100134830 /* AddThoughtViewController.swift */; };
 		215884D0263F2FD200DE349E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884CF263F2FD200DE349E /* AppDelegate.swift */; };
 		215884D2263F2FD200DE349E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884D1263F2FD200DE349E /* SceneDelegate.swift */; };
-		215884D4263F2FD200DE349E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884D3263F2FD200DE349E /* ViewController.swift */; };
+		215884D4263F2FD200DE349E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215884D3263F2FD200DE349E /* MainViewController.swift */; };
 		215884D7263F2FD200DE349E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215884D5263F2FD200DE349E /* Main.storyboard */; };
 		215884D9263F2FD400DE349E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215884D8263F2FD400DE349E /* Assets.xcassets */; };
 		215884DC263F2FD400DE349E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215884DA263F2FD400DE349E /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		212DC6D7263F497100134830 /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
 		215884CC263F2FD200DE349E /* ThoughtItOutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtItOutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215884CF263F2FD200DE349E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		215884D1263F2FD200DE349E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		215884D3263F2FD200DE349E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		215884D3263F2FD200DE349E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		215884D6263F2FD200DE349E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		215884D8263F2FD400DE349E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		215884DB263F2FD400DE349E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +46,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212DC6D9263F497800134830 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				215884D3263F2FD200DE349E /* MainViewController.swift */,
+				212DC6D7263F497100134830 /* AddThoughtViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		212DC6DA263F497E00134830 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		212DC6DB263F498200134830 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		215884C3263F2FD200DE349E = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +90,11 @@
 		215884CE263F2FD200DE349E /* ThoughtItOutApp */ = {
 			isa = PBXGroup;
 			children = (
+				212DC6DB263F498200134830 /* Model */,
+				212DC6DA263F497E00134830 /* View */,
+				212DC6D9263F497800134830 /* Controllers */,
 				215884CF263F2FD200DE349E /* AppDelegate.swift */,
 				215884D1263F2FD200DE349E /* SceneDelegate.swift */,
-				215884D3263F2FD200DE349E /* ViewController.swift */,
 				215884D5263F2FD200DE349E /* Main.storyboard */,
 				215884D8263F2FD400DE349E /* Assets.xcassets */,
 				215884DA263F2FD400DE349E /* LaunchScreen.storyboard */,
@@ -83,7 +110,6 @@
 				34746F271B4E56566E818885 /* Pods-ThoughtItOutApp.debug.xcconfig */,
 				8F884147A246BFD0A72CD942 /* Pods-ThoughtItOutApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,7 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				215884D4263F2FD200DE349E /* ViewController.swift in Sources */,
+				212DC6D8263F497100134830 /* AddThoughtViewController.swift in Sources */,
+				215884D4263F2FD200DE349E /* MainViewController.swift in Sources */,
 				215884D0263F2FD200DE349E /* AppDelegate.swift in Sources */,
 				215884D2263F2FD200DE349E /* SceneDelegate.swift in Sources */,
 			);
