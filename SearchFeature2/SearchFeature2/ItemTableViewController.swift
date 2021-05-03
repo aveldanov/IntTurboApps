@@ -13,13 +13,14 @@ class ItemTableViewController: UITableViewController, UISearchBarDelegate {
     
     
     let data = ["apple","banana","pear","peach","plum"]
-    
+    var filteredData: [String]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         
+        filteredData = data
 
     }
 
@@ -32,7 +33,7 @@ class ItemTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return filteredData.count
     }
 
     
@@ -41,11 +42,29 @@ class ItemTableViewController: UITableViewController, UISearchBarDelegate {
             fatalError("no cell")
         }
 
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = filteredData[indexPath.row]
 
         return cell
     }
     
 
+ //MARK: Search Bar Config
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = []
+        
+        if searchText == "" {
+            filteredData = data
+        }else{
+            for item in data{
+                if item.lowercased().contains(searchText.lowercased()){
+                    filteredData.append(item)
+                }
 
+            }
+        }
+
+        
+        self.tableView.reloadData()
+    }
 }
