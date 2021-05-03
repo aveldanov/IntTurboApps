@@ -7,15 +7,19 @@
 
 import UIKit
 
-class ItemTableViewController: UITableViewController {
+class ItemTableViewController: UITableViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     let data = ["apple","banana","pear","peach","plum"]
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchBar.delegate = self
+        
 
     }
 
