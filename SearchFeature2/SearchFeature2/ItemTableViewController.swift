@@ -33,9 +33,11 @@ class ItemTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell else {
+            fatalError("no cell")
+        }
 
-        // Configure the cell...
+        cell.textLabel?.text = data[indexPath.row]
 
         return cell
     }
