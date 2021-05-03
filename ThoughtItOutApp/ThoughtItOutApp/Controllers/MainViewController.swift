@@ -53,6 +53,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 for document in snapshot.documents{
                     let data = document.data()
                     let username = data[USERNAME] as? String ?? "no name"
+                    let timestamp = data[TIMESTAMP] ?? Date()
+                    let thoughtText = data[THOUGHT_TEXT] ?? ""
+                    let numLikes = data[NUM_LIKES] ?? 0
+                    let numComments = data[NUM_COMMENTS] ?? 0
+                    let documentID = document.documentID
                     
                 }
             }
