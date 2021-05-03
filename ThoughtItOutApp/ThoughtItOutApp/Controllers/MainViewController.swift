@@ -35,8 +35,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.estimatedRowHeight = 100
-        self.tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableView.automaticDimension
         thoughtsCollectionRef = db.collection(THOUGHT_REF)
     }
 
