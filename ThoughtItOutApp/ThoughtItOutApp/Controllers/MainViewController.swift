@@ -56,12 +56,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         
-        
+        thoughtsListener.remove()
+        setListener() // based on new category selected
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    func setListener(){
         //listener for Firebase changes
-       thoughtsListener = thoughtsCollectionRef.addSnapshotListener {snapshot, error in
+        //whereField adds filtering
+        thoughtsListener = thoughtsCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory).addSnapshotListener {snapshot, error in
             if let error = error{
                 debugPrint("Error fetching docs\(error)")
             }else{
@@ -87,6 +90,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
             }
         }
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setListener()
    
     }
     
