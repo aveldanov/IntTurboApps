@@ -77,13 +77,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 for document in snapshot.documents{
                     let data = document.data()
                     let username = data[USERNAME] as? String ?? "no name"
-                    let timestamp = data[TIMESTAMP] as? Date ?? Date()
+                    let timestamp = data[TIMESTAMP] as? Timestamp ?? nil
                     let thoughtText = data[THOUGHT_TEXT] as? String ?? ""
                     let numLikes = data[NUM_LIKES] as? Int ?? 0
                     let numComments = data[NUM_COMMENTS] as? Int ?? 0
                     let documentID = document.documentID
                     
-                    let newThought = Thought(username: username, timeStamp: timestamp, thoughtText: thoughtText, numLikes: numLikes, numComments: numComments, documentId: documentID)
+                    
+                    print(timestamp!.dateValue())
+                    let newThought = Thought(username: username, timestamp: timestamp!.dateValue(), thoughtText: thoughtText, numLikes: numLikes, numComments: numComments, documentId: documentID)
                     
                     self.thoughtsArr.append(newThought)
                 }
