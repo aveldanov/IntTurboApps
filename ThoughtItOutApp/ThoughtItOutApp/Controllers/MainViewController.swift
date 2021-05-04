@@ -43,6 +43,31 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     
     override func viewWillAppear(_ animated: Bool) {
+        //listener for Firebase changes
+        thoughtsCollectionRef.addSnapshotListener {snapshot, error in
+            if let error = error{
+                debugPrint("Error fetching docs\(error)")
+            }else{
+                guard let snapshot = snapshot else {
+                    return
+                }
+                for document in snapshot.documents{
+                    let data = document.data()
+                    let username = data[USERNAME] as? String ?? "no name"
+                    let timestamp = data[TIMESTAMP] as? Date ?? Date()
+                    let thoughtText = data[THOUGHT_TEXT] as? String ?? ""
+                    let numLikes = data[NUM_LIKES] as? Int ?? 0
+                    let numComments = data[NUM_COMMENTS] as? Int ?? 0
+                    let documentID = document.documentID
+                    
+                    let newThought = Thought(username: username, timeStamp: timestamp, thoughtText: thoughtText, numLikes: numLikes, numComments: numComments, documentId: documentID)
+                    
+                    self.thoughtsArr.append(newThought)
+                }
+                self.tableView.reloadData()
+        }
+        
+        
         thoughtsCollectionRef.getDocuments { snapshot, error in
             if let error = error{
                 debugPrint("Error fetching docs\(error)")
@@ -71,6 +96,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(thoughtsArr)
         return thoughtsArr.count
     }
     
