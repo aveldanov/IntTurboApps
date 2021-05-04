@@ -28,6 +28,7 @@
                                     <segment title="Popular"/>
                                 </segments>
                                 <connections>
+                                    <action selector="categoryChangeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="W2Z-gT-5Jw"/>
                                     <action selector="categoryChanged:" destination="PBb-Mn-RU3" eventType="valueChanged" id="bn1-5j-VpN"/>
                                 </connections>
                             </segmentedControl>
@@ -35,27 +36,27 @@
                                 <rect key="frame" x="0.0" y="172" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="153" id="NR3-ll-klC" customClass="ThoughtTableViewCell" customModule="ThoughtItOutApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="NR3-ll-klC" customClass="ThoughtTableViewCell" customModule="ThoughtItOutApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="145.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NR3-ll-klC" id="KiW-aE-zcn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JohnnyB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyM-dL-SIY">
-                                                    <rect key="frame" x="20" y="11" width="68" height="23.5"/>
+                                                    <rect key="frame" x="20" y="23" width="68" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my random thought...MORE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usg-Sq-ypM">
-                                                    <rect key="frame" x="20" y="54.5" width="374" height="19.5"/>
+                                                    <rect key="frame" x="20" y="66.5" width="374" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Et-Rt-RGA">
-                                                    <rect key="frame" x="20" y="94" width="52.5" height="24"/>
+                                                    <rect key="frame" x="20" y="98.5" width="52.5" height="24"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIconFilled" translatesAutoresizingMaskIntoConstraints="NO" id="nN7-Vh-swA">
                                                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -73,7 +74,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October, 9 9:01am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8q-U3-gEa">
-                                                    <rect key="frame" x="100" y="18" width="86" height="14"/>
+                                                    <rect key="frame" x="100" y="30" width="86" height="14"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -82,13 +83,13 @@
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstItem="h8q-U3-gEa" firstAttribute="firstBaseline" secondItem="zyM-dL-SIY" secondAttribute="firstBaseline" id="6Zm-oh-n9i"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0Et-Rt-RGA" secondAttribute="bottom" constant="24" id="JYl-ts-pMY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Et-Rt-RGA" secondAttribute="bottom" constant="12" id="JYl-ts-pMY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="usg-Sq-ypM" secondAttribute="trailing" id="PNE-oh-pKN"/>
                                                 <constraint firstItem="0Et-Rt-RGA" firstAttribute="leading" secondItem="KiW-aE-zcn" secondAttribute="leadingMargin" id="XNG-Eb-7MW"/>
                                                 <constraint firstItem="h8q-U3-gEa" firstAttribute="leading" secondItem="zyM-dL-SIY" secondAttribute="trailing" constant="12" id="YEc-qz-cMn"/>
-                                                <constraint firstItem="0Et-Rt-RGA" firstAttribute="top" secondItem="usg-Sq-ypM" secondAttribute="bottom" constant="20" id="bYb-fu-Xd0"/>
+                                                <constraint firstItem="0Et-Rt-RGA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="usg-Sq-ypM" secondAttribute="bottom" constant="12" id="bYb-fu-Xd0"/>
                                                 <constraint firstItem="usg-Sq-ypM" firstAttribute="leading" secondItem="KiW-aE-zcn" secondAttribute="leadingMargin" id="iwu-so-UJQ"/>
-                                                <constraint firstItem="zyM-dL-SIY" firstAttribute="top" secondItem="KiW-aE-zcn" secondAttribute="topMargin" id="rHW-Y6-quU"/>
+                                                <constraint firstItem="zyM-dL-SIY" firstAttribute="top" secondItem="KiW-aE-zcn" secondAttribute="topMargin" constant="12" id="rHW-Y6-quU"/>
                                                 <constraint firstItem="zyM-dL-SIY" firstAttribute="leading" secondItem="KiW-aE-zcn" secondAttribute="leadingMargin" id="tfg-LG-EHO"/>
                                                 <constraint firstItem="usg-Sq-ypM" firstAttribute="top" secondItem="zyM-dL-SIY" secondAttribute="bottom" constant="20" id="vtY-DH-GZ0"/>
                                             </constraints>

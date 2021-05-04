@@ -28,6 +28,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private var thoughtsArr = [Thought]()
     private var thoughtsCollectionRef: CollectionReference!
+    private var thoughtsListener: ListenerRegistration!
+    private var selectedCategory = ThoughtCategory.funny.rawValue
     let db = Firestore.firestore()
 
     
@@ -35,43 +37,37 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 140
         tableView.rowHeight = UITableView.automaticDimension
         thoughtsCollectionRef = db.collection(THOUGHT_REF)
     }
 
 
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //listener for Firebase changes
-        thoughtsCollectionRef.addSnapshotListener {snapshot, error in
-            if let error = error{
-                debugPrint("Error fetching docs\(error)")
-            }else{
-                guard let snapshot = snapshot else {
-                    return
-                }
-                for document in snapshot.documents{
-                    let data = document.data()
-                    let username = data[USERNAME] as? String ?? "no name"
-                    let timestamp = data[TIMESTAMP] as? Date ?? Date()
-                    let thoughtText = data[THOUGHT_TEXT] as? String ?? ""
-                    let numLikes = data[NUM_LIKES] as? Int ?? 0
-                    let numComments = data[NUM_COMMENTS] as? Int ?? 0
-                    let documentID = document.documentID
-                    
-                    let newThought = Thought(username: username, timeStamp: timestamp, thoughtText: thoughtText, numLikes: numLikes, numComments: numComments, documentId: documentID)
-                    
-                    self.thoughtsArr.append(newThought)
-                }
-                self.tableView.reloadData()
+    @IBAction func categoryChangeAction(_ sender: UISegmentedControl) {
+        switch segmentControlMain.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.funny.rawValue
+        case 1:
+            selectedCategory = ThoughtCategory.serious.rawValue
+        case 2:
+            selectedCategory = ThoughtCategory.crazy.rawValue
+        default:
+            selectedCategory = ThoughtCategory.popular.rawValue
         }
         
         
-        thoughtsCollectionRef.getDocuments { snapshot, error in
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //listener for Firebase changes
+       thoughtsListener = thoughtsCollectionRef.addSnapshotListener {snapshot, error in
             if let error = error{
                 debugPrint("Error fetching docs\(error)")
             }else{
+                self.thoughtsArr.removeAll()
+                
+                
                 guard let snapshot = snapshot else {
                     return
                 }
@@ -91,9 +87,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
             }
         }
+   
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        thoughtsListener.remove()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(thoughtsArr)
