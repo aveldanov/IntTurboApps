@@ -65,9 +65,7 @@ class ItemsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DetailedViewController
-        
         if let indexPath = tableView.indexPathForSelectedRow{
-            
             if let loadedItems = loadedItems{
                 destinationVC.nameLoaded = loadedItems[indexPath.row].name
                 destinationVC.keyLoaded = loadedItems[indexPath.row].license?.key
