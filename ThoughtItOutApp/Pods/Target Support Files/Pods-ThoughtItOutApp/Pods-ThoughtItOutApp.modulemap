@@ -1,0 +1,6 @@
+framework module Pods_ThoughtItOutApp {
+  umbrella header "Pods-ThoughtItOutApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
