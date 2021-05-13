@@ -9,37 +9,61 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
 
+    
+    private let url = URL(string: "https://api.github.com/users/intuit/repos")!
+    var loadedItems : [Item]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        WebService().fetchData(url) { (result) in
+            switch result{
+            case .success(let items):
+                self.loadedItems = items
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(_):
+                break
+            
+            
+            }
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return loadedItems == nil ? 0 : loadedItems!.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
+            
+            fatalError("no cell")
+            
+        }
+        
+        if let loadedItems = loadedItems{
+            cell.nameLabel.text = loadedItems[indexPath.row].name
+        }
+        
+        
+        
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

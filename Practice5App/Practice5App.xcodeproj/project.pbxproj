@@ -14,6 +14,9 @@
 		21D9917D264DE1580085068E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D9917B264DE1580085068E /* LaunchScreen.storyboard */; };
 		21D99187264DE1CD0085068E /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99186264DE1CD0085068E /* ItemTableViewController.swift */; };
 		21D9918B264DE1E20085068E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9918A264DE1E20085068E /* WebService.swift */; };
+		21D99192264DE37D0085068E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99191264DE37D0085068E /* Item.swift */; };
+		21D99195264DE55D0085068E /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99194264DE55D0085068E /* ItemTableViewCell.swift */; };
+		21D99198264DE6A60085068E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99197264DE6A60085068E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		21D9917E264DE1590085068E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D99186264DE1CD0085068E /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		21D9918A264DE1E20085068E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		21D99191264DE37D0085068E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		21D99194264DE55D0085068E /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		21D99197264DE6A60085068E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		21D9916F264DE1580085068E /* Practice5App */ = {
 			isa = PBXGroup;
 			children = (
+				21D9918F264DE2A90085068E /* Controllers */,
+				21D9918E264DE2A40085068E /* Model */,
 				21D99189264DE1D30085068E /* Services */,
 				21D99170264DE1580085068E /* AppDelegate.swift */,
 				21D99172264DE1580085068E /* SceneDelegate.swift */,
@@ -65,7 +73,6 @@
 				21D99179264DE1580085068E /* Assets.xcassets */,
 				21D9917B264DE1580085068E /* LaunchScreen.storyboard */,
 				21D9917E264DE1590085068E /* Info.plist */,
-				21D99186264DE1CD0085068E /* ItemTableViewController.swift */,
 			);
 			path = Practice5App;
 			sourceTree = "<group>";
@@ -76,6 +83,24 @@
 				21D9918A264DE1E20085068E /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		21D9918E264DE2A40085068E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21D99191264DE37D0085068E /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21D9918F264DE2A90085068E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21D99186264DE1CD0085068E /* ItemTableViewController.swift */,
+				21D99194264DE55D0085068E /* ItemTableViewCell.swift */,
+				21D99197264DE6A60085068E /* DetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,10 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D99192264DE37D0085068E /* Item.swift in Sources */,
 				21D99171264DE1580085068E /* AppDelegate.swift in Sources */,
 				21D99187264DE1CD0085068E /* ItemTableViewController.swift in Sources */,
 				21D9918B264DE1E20085068E /* WebService.swift in Sources */,
+				21D99195264DE55D0085068E /* ItemTableViewCell.swift in Sources */,
 				21D99173264DE1580085068E /* SceneDelegate.swift in Sources */,
+				21D99198264DE6A60085068E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
