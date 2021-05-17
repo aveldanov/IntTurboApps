@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
+        searchMovie()
     }
 
     
@@ -35,15 +36,35 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         textField.resignFirstResponder()
         
-        guard let text = textField.text, !text.isEmpty else {
-            return
-        }
+//        guard let text = textField.text, !text.isEmpty else {
+//            return
+//        }
         
-        let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=\("query")&type=movie")!
+        let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=query&type=movie")!
         URLSession.shared.dataTask(with: url) { data, response, error in
+
             guard let data = data, error == nil else{
                 return
             }
+            // decode
+            
+            do{
+                
+            }catch{
+                
+                
+            }
+            
+            
+            
+            let decoder = JSONDecoder()
+
+            let items = try? decoder.decode([Movie].self, from: data)
+            print(items)
+
+            // udpate array
+            
+            // refresh view
             
             
         }.resume()
@@ -75,6 +96,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
 
 
-struct Movie {
+struct Movie: Codable {
+    var Title: String
+    var Year: String
+    var imdbID: String
+    var _Type: String
+    var Poster: String
     
+    private enum CodingKeys: String, CodingKey{
+        case Title,Year,imdbID,_Type = "Type",Poster
+    }
+    
+}
+
+struct Search: Codable {
+    private var Search: [Movie]
 }
