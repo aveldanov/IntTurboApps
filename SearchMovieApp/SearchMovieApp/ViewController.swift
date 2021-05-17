@@ -52,19 +52,21 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             let decoder = JSONDecoder()
 
             do{
-                items = try? decoder.decode(MovieResult.self, from: data)
+                items = try decoder.decode(MovieResult.self, from: data)
                 print(items)
             }catch{
                 print("error")
                 
             }
             
+            guard let finalItems = items else{
+                return
+            }
             
-            
-
-            print(items)
+   
 
             // udpate array
+            
             
             // refresh view
             
