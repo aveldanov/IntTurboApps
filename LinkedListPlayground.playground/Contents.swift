@@ -1,106 +1,94 @@
 
+// https://www.dropbox.com/s/66xo8f483hb9rb1/Columnar%20Layout%201.png?dl=0
 
-class ListNode<T>{
 
-    
-    var val: T
-    var next: ListNode?
-    
-    init( _ val: T, _ next: ListNode?) {
-        self.val = val
-        self.next = next
-    }
-    
+
+struct Size {
+  var width: Int
+  var height: Int
 }
 
+struct Point {
+  var x: Int
+  var y: Int
+}
 
-struct LinkedList<T> where T: Equatable{
+public class ColumnarLayout {
+   static func layoutChildViews(parentViewSize: Size, childViewSizes: [Size]) throws -> [Point] {
     
-    var head: ListNode<T>?
+    var remHeight = parentViewSize.height
+    var remWidth = parentViewSize.width
+    var arr = [Point]()
     
-    func displayList(){
-        
-        var current = head
-        while current != nil {
-            print(current?.val ?? "nil")
-            current = current?.next
-        }
-        
+    var x = 0
+    var y = 0
+    
+
+    func addPoint(item: Size){
+        y += item.height
+        arr.append(Point(x: x, y: y))
+        remHeight -= item.height
     }
     
-    mutating func add(_ val: T){
-        
-        if head == nil{
-            head = ListNode(val, nil)
-            return
+    for i in childViewSizes{
+        if remWidth > i.width{
+            
+            
+            if remHeight > i.height{
+  
+                addPoint(item: i)
+                
+                
+//                y += i.height
+//                arr.append(Point(x: x, y: y))
+//                remHeight -= i.height
+//
+            }else{
+                
+                print("B")
+                remWidth -= i.width
+                x += i.width
+                y = 0
+                remHeight = parentViewSize.height
+  
+                addPoint(item: i)
+                
+//                y += i.height
+//                arr.append(Point(x: x, y: y))
+//                remHeight -= i.height
+                
+            }
+            
+            
+            
+            
+            
+            
         }
         
-        var current = head
-        while  current?.next != nil {
-            current = current?.next
-        }
         
-        
-        current?.next = ListNode(val,  nil)
         
     }
-    
-    
-//    mutating func insert(_ val: T, at index: Int){
-//        var curInd = 0
-//        if head == nil{
-//            head = ListNode(val, nil)
-//        }
-//        var current = head
-//
-//        while current != nil && curInd != index{
-//            current = current?.next
-//            curInd+=1
-//        }
-//        // 3->2->1->nil
-//
-//
-//        current?.next = ListNode(val, current?.next)
-//
-//
-//    }
+ 
     
     
     
-//    mutating func delete(_ val: T){
-//        if head?.val == val{
-//            head = head?.next
-//            return
-//        }
-//        // 3->2->1->nil
-//        var current = head
-//        var prev : ListNode<T>?
-//        while current != nil && current?.val != val {
-//            prev = current //3
-//            current = current?.next // 2
-//
-//        }
-//
-//
-//        prev?.next = current?.next
-//
-//
-//    }
+    print(arr)
     
+    return [Point]()
+    
+  }
     
     
 }
 
 
-
-
-var list = LinkedList<Int>()
-
-list.add(3)
-list.add(2)
-list.add(1)
+let result = try ColumnarLayout.layoutChildViews(parentViewSize: Size(width: 5, height: 5), childViewSizes: [Size(width: 2, height: 2), Size(width: 2, height: 2),Size(width: 2, height: 2)])
 
 
 
-list.displayList()
+
+
+
+
 

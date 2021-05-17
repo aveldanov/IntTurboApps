@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kAz-xx-tMW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="IHM-bC-FLh">
+            <objects>
+                <viewController id="kAz-xx-tMW" customClass="ViewController" customModule="SearchMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cLl-BW-Ewb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctC-qm-ch9">
+                                <rect key="frame" x="20" y="54" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="h1p-CL-0zD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYY-Ok-Qex">
+                                <rect key="frame" x="10" y="116" width="394" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xrb-T9-Nbn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jYY-Ok-Qex" firstAttribute="top" secondItem="ctC-qm-ch9" secondAttribute="bottom" constant="10" id="7aD-lj-cX9"/>
+                            <constraint firstItem="xrb-T9-Nbn" firstAttribute="bottom" secondItem="jYY-Ok-Qex" secondAttribute="bottom" constant="10" id="L96-cm-uhA"/>
+                            <constraint firstItem="ctC-qm-ch9" firstAttribute="top" secondItem="xrb-T9-Nbn" secondAttribute="top" constant="10" id="RAd-rd-ZKh"/>
+                            <constraint firstItem="jYY-Ok-Qex" firstAttribute="leading" secondItem="xrb-T9-Nbn" secondAttribute="leading" constant="10" id="RSd-yy-1px"/>
+                            <constraint firstItem="xrb-T9-Nbn" firstAttribute="trailing" secondItem="jYY-Ok-Qex" secondAttribute="trailing" constant="10" id="iIv-KX-vMR"/>
+                            <constraint firstItem="xrb-T9-Nbn" firstAttribute="trailing" secondItem="ctC-qm-ch9" secondAttribute="trailing" constant="20" id="m3C-ku-wXY"/>
+                            <constraint firstItem="ctC-qm-ch9" firstAttribute="leading" secondItem="xrb-T9-Nbn" secondAttribute="leading" constant="20" id="mkw-E1-8A5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jYY-Ok-Qex" id="kDs-Sj-dP3"/>
+                        <outlet property="textField" destination="ctC-qm-ch9" id="O6U-Ww-YSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAd-pq-RgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="-168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
