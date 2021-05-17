@@ -34,6 +34,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     func searchMovie(){
         
         textField.resignFirstResponder()
+        
+        guard let text = textField.text, !text.isEmpty else {
+            return
+        }
+        
+        
+        
+        
     }
     
     
