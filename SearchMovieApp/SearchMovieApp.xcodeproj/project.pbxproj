@@ -13,6 +13,8 @@
 		2171807E26521EE7005CE07A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2171807C26521EE7005CE07A /* Main.storyboard */; };
 		2171808026521EE8005CE07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171807F26521EE8005CE07A /* Assets.xcassets */; };
 		2171808326521EE8005CE07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2171808126521EE8005CE07A /* LaunchScreen.storyboard */; };
+		21C84C7126522E810007026C /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C84C7026522E810007026C /* ItemTableViewCell.swift */; };
+		21C84C75265232290007026C /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C84C74265232290007026C /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2171807F26521EE8005CE07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2171808226521EE8005CE07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2171808426521EE8005CE07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C84C7026522E810007026C /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		21C84C74265232290007026C /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				2171807F26521EE8005CE07A /* Assets.xcassets */,
 				2171808126521EE8005CE07A /* LaunchScreen.storyboard */,
 				2171808426521EE8005CE07A /* Info.plist */,
+				21C84C7026522E810007026C /* ItemTableViewCell.swift */,
+				21C84C74265232290007026C /* ItemCell.xib */,
 			);
 			path = SearchMovieApp;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C84C75265232290007026C /* ItemCell.xib in Resources */,
 				2171808326521EE8005CE07A /* LaunchScreen.storyboard in Resources */,
 				2171808026521EE8005CE07A /* Assets.xcassets in Resources */,
 				2171807E26521EE7005CE07A /* Main.storyboard in Resources */,
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C84C7126522E810007026C /* ItemTableViewCell.swift in Sources */,
 				2171807B26521EE7005CE07A /* ViewController.swift in Sources */,
 				2171807726521EE7005CE07A /* AppDelegate.swift in Sources */,
 				2171807926521EE7005CE07A /* SceneDelegate.swift in Sources */,

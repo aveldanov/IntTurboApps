@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(ItemTableViewCell.nib(), forCellReuseIdentifier: ItemTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
@@ -92,7 +94,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.identifier, for: indexPath) as! ItemTableViewCell
+        
+        
+        cell.configureCell(with: movies[indexPath.row])
+        
+        return cell
     }
     
     
@@ -100,6 +107,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: true)
         // Show movie details
         
+        let id = movies[indexPath.row].imdbID
+        let url = URL(string: "https://www.imdb.com/title/\(id)")!
+        let vc = SFSafariViewController(url: url)
+        
+        present(vc, animated: true)
     }
 
 }
