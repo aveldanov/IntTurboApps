@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             return
         }
         
-        let url = URL(string: "ttps://www.omdbapi.com/?apikey=3aea79ac&s=\("query")&type=movie")!
+        let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=\("query")&type=movie")!
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             
