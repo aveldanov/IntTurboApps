@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     //Table
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
