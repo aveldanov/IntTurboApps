@@ -22,13 +22,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
-        searchMovie()
     }
 
     
     
     // Field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchMovie()
+
         return true
     }
     
@@ -36,12 +37,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         textField.resignFirstResponder()
         
-//        guard let text = textField.text, !text.isEmpty else {
-//            return
-//        }
+        guard let text = textField.text, !text.isEmpty else {
+            return
+        }
+        // remove results before search
+        movies.removeAll()
+        //%20 - remove blanks SPACE
+        let query = text.replacingOccurrences(of: " ", with: "%20")
         
-        let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=query&type=movie")!
+        let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=\(query)&type=movie")!
         URLSession.shared.dataTask(with: url) { data, response, error in
+            print(data, error)
 
             guard let data = data, error == nil else{
                 return
@@ -63,14 +69,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
                 return
             }
             
-   
+            print(finalItems.Search.first?.Title)
 
             // udpate array
-            
-            
+            let newMovies = finalItems.Search
+            self.movies.append(contentsOf: newMovies)
+            print(self.movies.first?.Title)
             // refresh view
-            
-            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }.resume()
         
     }
@@ -101,11 +109,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
 
 struct Movie: Codable {
-    private var Title: String
-    private var Year: String
-    private var imdbID: String
-    private var _Type: String
-    private var Poster: String
+    public private(set) var Title: String
+    public private(set) var Year: String
+    public private(set) var imdbID: String
+    public private(set) var _Type: String
+    public private(set) var Poster: String
     
     private enum CodingKeys: String, CodingKey{
         case Title,Year,imdbID,_Type = "Type",Poster
@@ -114,5 +122,5 @@ struct Movie: Codable {
 }
 
 struct MovieResult: Codable {
-    private var Search: [Movie]
+    public private(set) var Search: [Movie]
 }
