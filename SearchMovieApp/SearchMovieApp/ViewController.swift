@@ -110,7 +110,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         let id = movies[indexPath.row].imdbID
         let url = URL(string: "https://www.imdb.com/title/\(id)")!
         let vc = SFSafariViewController(url: url)
-        
         present(vc, animated: true)
     }
 
