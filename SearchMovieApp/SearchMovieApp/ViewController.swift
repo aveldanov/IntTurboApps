@@ -48,18 +48,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             }
             // decode
             
+            var items: MovieResult?
+            let decoder = JSONDecoder()
+
             do{
-                
+                items = try? decoder.decode(MovieResult.self, from: data)
+                print(items)
             }catch{
-                
+                print("error")
                 
             }
             
             
             
-            let decoder = JSONDecoder()
 
-            let items = try? decoder.decode([Movie].self, from: data)
             print(items)
 
             // udpate array
@@ -97,11 +99,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
 
 struct Movie: Codable {
-    var Title: String
-    var Year: String
-    var imdbID: String
-    var _Type: String
-    var Poster: String
+    private var Title: String
+    private var Year: String
+    private var imdbID: String
+    private var _Type: String
+    private var Poster: String
     
     private enum CodingKeys: String, CodingKey{
         case Title,Year,imdbID,_Type = "Type",Poster
@@ -109,6 +111,6 @@ struct Movie: Codable {
     
 }
 
-struct Search: Codable {
+struct MovieResult: Codable {
     private var Search: [Movie]
 }
