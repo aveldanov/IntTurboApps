@@ -41,10 +41,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         let url = URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=\("query")&type=movie")!
         URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else{
+                return
+            }
             
             
-            
-        }
+        }.resume()
         
     }
     
