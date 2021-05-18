@@ -24,6 +24,7 @@ struct WebService {
             do{
                 var items = try decoder.decode(SearchResult.self, from: data)
                 print(items)
+                completion(.success(items.Search))
             }catch{
                 print(error.localizedDescription)
                 

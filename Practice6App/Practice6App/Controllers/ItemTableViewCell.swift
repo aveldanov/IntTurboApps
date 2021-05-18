@@ -13,7 +13,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewPoster: UIImageView!
     
     
-    
+    var titleLoaded: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +28,13 @@ class ItemTableViewCell: UITableViewCell {
     func configureCell(with model:Item){
         titleLabel.text = model.Title
         yearLabel.text = model.Year
+        let url = URL(string: model.Poster)!
+        
+        if let data = try? Data(contentsOf: url){
+            imageViewPoster.image = UIImage(data: data)
+        }
+            
+            
         
         
     }
