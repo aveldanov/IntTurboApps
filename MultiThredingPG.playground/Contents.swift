@@ -16,11 +16,10 @@ import UIKit
 //print("sync: outside")
 
 
-DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-    print("First delay 2 seconds")
+DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) {
+    print("First delay 5 seconds")
 }
 
-
 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-    print("Second delat - 2second")
+    print("Second delay - 2 seconds")
 }
