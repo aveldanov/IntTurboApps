@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21C136E42655975E00134920 /* FeatureFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CE3D1B26559313005C6965 /* FeatureFramework.framework */; };
+		21C136E52655975E00134920 /* FeatureFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21CE3D1B26559313005C6965 /* FeatureFramework.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		21CE3D07265592F2005C6965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE3D06265592F2005C6965 /* AppDelegate.swift */; };
 		21CE3D09265592F2005C6965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE3D08265592F2005C6965 /* SceneDelegate.swift */; };
 		21CE3D0B265592F2005C6965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE3D0A265592F2005C6965 /* ViewController.swift */; };
 		21CE3D0E265592F2005C6965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CE3D0C265592F2005C6965 /* Main.storyboard */; };
 		21CE3D10265592F5005C6965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CE3D0F265592F5005C6965 /* Assets.xcassets */; };
 		21CE3D13265592F5005C6965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CE3D11265592F5005C6965 /* LaunchScreen.storyboard */; };
-		21CE3D1C26559313005C6965 /* FeatureFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CE3D1B26559313005C6965 /* FeatureFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21C136E62655975E00134920 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21C136E52655975E00134920 /* FeatureFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21CE3D03265592F2005C6965 /* UseFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CE3D1C26559313005C6965 /* FeatureFramework.framework in Frameworks */,
+				21C136E42655975E00134920 /* FeatureFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 				21CE3CFF265592F2005C6965 /* Sources */,
 				21CE3D00265592F2005C6965 /* Frameworks */,
 				21CE3D01265592F2005C6965 /* Resources */,
+				21C136E62655975E00134920 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
