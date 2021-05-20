@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     @IBAction func openAction(_ sender: Any) {
         let manager = Manager()
-        let vc = manager.viewController()
-        self.present(vc, animated: true, completion: nil)
+        let vc = manager.viewController();       self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
