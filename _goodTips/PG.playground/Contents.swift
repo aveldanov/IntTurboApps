@@ -83,6 +83,26 @@ print(arr.sorted{($0[2] as! Int)<($1[2] as! Int)}.sorted{($0[1] as! Int)>($1[1] 
 
 
 
+let input = [
+    "item1, 98, 14",
+    "item2, 12, 12",
+    "items, 98, 8"
+]
+
+
+func sort(_ arr: [String])->[String]{
+    
+    
+    arr.split(separator: ",")
+    
+    
+   return []
+}leetcpo
+print(sort(input))
+
+
+
+
 
 
 
@@ -114,3 +134,32 @@ func sortArr(_ arr:[String])->[String]{
 
 
 sortArr(arrWord)
+
+
+
+
+
+func fitBoxes(_ box:[Int], _ items: [Int])->Int{
+
+    
+    let x = max(box[0],box[1])/max(items[0],items[1])
+    let y = min(box[0],box[1])/min(items[0],items[1])
+
+    print(x,y)
+    
+    
+    
+    
+    
+    return x*y
+}
+
+
+fitBoxes([6,5], [3,3])
+
+
+
+
+
+
+
