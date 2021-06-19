@@ -16,6 +16,8 @@ struct Point {
 public class ColumnarLayout {
     static func layoutChildViews(parentViewSize: Size, childViewSizes: [Size]) throws -> [Point] {
         
+    
+        
         var remHeight = parentViewSize.height
         var remWidth = parentViewSize.width
         var arr = [Point]()
@@ -49,7 +51,7 @@ public class ColumnarLayout {
 
 
 let result = try ColumnarLayout.layoutChildViews(parentViewSize: Size(width: 5, height: 5), childViewSizes: [Size(width: 2, height: 2), Size(width: 2, height: 2),Size(width: 2, height: 2)])
-
+print(result)
 
 
 
