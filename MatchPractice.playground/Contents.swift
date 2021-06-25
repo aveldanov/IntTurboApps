@@ -49,7 +49,7 @@
  //MARK: Higher Order Functions
 
 
-var array = [1,2,3,5,12,199,17,100]
+//var array = [1,2,x3,5,12,199,17,100]
 
 //Filter
 //
@@ -137,7 +137,7 @@ var array = [1,2,3,5,12,199,17,100]
 
  //MARK: throws
 
-
+//
 //enum LoginError: Error{
 //    case incompleteForm
 //    case invalidEmail
@@ -162,7 +162,7 @@ var array = [1,2,3,5,12,199,17,100]
 //    print("incomplete form")
 //}
 
-
+//
 //struct Input{
 //    var x: Int
 //    var y: Int
@@ -184,28 +184,81 @@ var array = [1,2,3,5,12,199,17,100]
 //}
 //
 //try Calc.add(Input(x: 40, y: 5))
+//
+
+
+
+//
+//
+//func calculator (_ a: Int, _ b: Int, _ oper: (Int, Int)->(Int))->Int{
+//
+//    return oper(a, b)
+//
+//}
+//
+//
+//func add(num1: Int, num2: Int) -> Int{
+//
+//    return num1 + num2
+//}
+//
+//func multiply(num1: Int, num2: Int) -> Int{
+//
+//    return num1 * num2
+//}
+//
+//let result = calculator(3, 4){$0*$1}
+//result
 
 
 
 
 
 
-func calculator (_ a: Int, _ b: Int, _ oper: (Int, Int)->(Int))->Int{
-    
-    return oper(a, b)
-    
+func calculator(_ a:Int, _ b:Int,_ oper:(Int,Int)->(Int) )->Int{
+
+
+
+    return oper(a,b)
+
 }
 
+//func calculator(_ a:Int, _ b:Int,_ oper:(Int,Int)->(Int) )->Int{
 
-func add(num1: Int, num2: Int) -> Int{
-    
-    return num1 + num2
-}
 
-func multiply(num1: Int, num2: Int) -> Int{
-    
-    return num1 * num2
-}
+//
+//func add(_ n1:Int, _ n2:Int)->Int{
+//
+//    return n1+n2
+//}
+//
+//
+//
+//func muliply(_ n1:Int, _ n2:Int)->Int{
+//
+//    return n1*n2
+//}
 
-let result = calculator(3, 4){$0*$1}
-result
+
+    print(calculator(3, 4){$0*$1})
+
+//
+//
+//enum ErrorHandler: Error{
+//    case emptyInput
+//}
+//
+//
+//func login(_ login: String,_ password:String) throws{
+//   
+//    if login.isEmpty || password.isEmpty{
+//        throw ErrorHandler.emptyInput
+//    }
+//    
+//    
+//}
+//
+//
+//let result = try login("skcjlksdjc", "sfjv")
+//
+
