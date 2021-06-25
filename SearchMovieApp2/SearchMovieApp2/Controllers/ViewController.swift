@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices //to show webview for movies
 
 //UI
 //Network
@@ -24,7 +25,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(MovieTableViewCell.nib(), forCellReuseIdentifier: MovieTableViewCell.identifier)
         tableView.delegate = self
+        tableView.dataSource = self
         textField.delegate = self
         
     }
@@ -48,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let query = text.replacingOccurrences(of: " ", with: "%20")
         
         URLSession.shared.dataTask(with: URL(string: "https://www.omdbapi.com/?apikey=3aea79ac&s=\(query)&type=movie")!){ data, response, error in
-            print(data)
+//            print(data)
             
             self.movies.removeAll()
             guard let data = data, error == nil else{
@@ -73,7 +77,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let newMovies = finalMovies.Search
             self.movies.append(contentsOf: newMovies)
 //
-            print(self.movies)
+//            print(self.movies)
 //            //refresh table
             
             DispatchQueue.main.async {
@@ -93,13 +97,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        print(movies)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
+            fatalError("No Cell")
+        }
         
-        return UITableViewCell()
+        
+        cell.configure(movies[indexPath.row])
+        
+        return cell
     }
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let url = "https://www.imdb.com/title/\(movies[indexPath.row].imdbID)/"
+        
+        let vc = SFSafariViewController(url: URL(string: url)!)
+        
+        present(vc, animated: true, completion: nil)
     }
     
 
